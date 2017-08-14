@@ -1,0 +1,8 @@
+# Management Plane
+h1,172.16.228.10/24,peer-h1,,
+h2,172.16.228.20/24,peer-h2,,
+h3,172.16.228.30/24,peer-h3,,
+# Data Plane
+h1-srv,192.168.0.10/24,peer-h1-srv,,
+h2-srv,192.168.0.20/24,peer-h2-srv,,
+h3-srv,192.168.0.30/24,peer-h3-srv,,
