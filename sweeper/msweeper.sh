@@ -11,6 +11,7 @@ if [ "`id | grep root`" = "" ]; then
 	exit 1
 fi
 
+# Get sweeping target
 if [ ! $1 ]; then
 	TARGET_IP_LIST_FILE="target_list.csv"
 else
@@ -30,6 +31,7 @@ done
 
 echo "[INFO] Multiple ping sweeper started."
 
+# Run multiple sweeper
 PROC_ID_LIST_FILE="proc_list"
 if [ -e $PROC_ID_LIST_FILE ]; then
 	rm $PROC_ID_LIST_FILE
@@ -48,7 +50,7 @@ for src_ip in ${service_ips[@]}; do
 	done
 done
 
-# Test result
+# Record sweeping result
 RESULT_LIST_FILE="result_list"
 if [ -e $RESULT_LIST_FILE ]; then
 	rm $RESULT_LIST_FILE
